@@ -1,0 +1,149 @@
+.form {
+  background: #2f7de1;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.emer{
+  display: flex;
+  align-items: center;
+  font-size: .5rem;
+  gap: 4rem;
+  margin-left: 50px;
+
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form p {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.empresa img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+/* Inputs */
+.form input,
+.form textarea {
+  width: 90%;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background-color: #f5ebeb;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fila label + input */
+.fila {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  gap: 0.8rem;
+}
+
+.fila label {
+  width: 190px;
+  font-size: 0.85rem;
+  text-align: right;
+  opacity: 0.9;
+}
+
+.fila input {
+  flex: 1;
+}
+
+/* Observaciones */
+.observaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.observaciones textarea {
+  border-radius: 12px;
+  resize: none;
+}
+
+/* Vitales */
+.vitales {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.8rem;
+  border-radius: 12px;
+}
+
+/* Botón */
+button {
+  margin: 1.5rem auto 0;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #001153, #010247);
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* PRINT */
+@media print {
+  .print-hide{
+    display: none;
+  }
+  body {
+    margin: 0;
+  }
+  .emer{
+    display: none;
+  }
+
+  .form {
+    transform: scale(0.9);
+    transform-origin: top center;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  button {
+    display: none;
+  }
+
+  .vitales,
+  .observaciones {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    size: A4;
+    margin: 5mm;
+  }
+}
+
