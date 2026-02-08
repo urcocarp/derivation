@@ -62,7 +62,7 @@ const handlePrint = () => {
         <div className={styles.empresa}>
           <img src={logo} alt="Logo" />
         </div>
-        <p>DERIVACIONES SANATORIO ALLENDE</p>
+        <p>DERIVACIONES SANATORIO ALLENDE </p>
       </div>
       <div className={styles.emer}>
         <p>SUP ENF:60700/3175</p>
